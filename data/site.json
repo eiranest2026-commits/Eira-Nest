@@ -15,5 +15,35 @@
   "gallery2": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=85",
   "gallery3": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=85",
   "gallery4": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=700&q=85",
-  "gallery5": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85"
+  "gallery5": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85",
+  "aboutEyebrow": "Welcome to EiraNest",
+  "aboutHeading": "Your stay, your way.",
+  "facilityHeading": "Made for a comfortable stay",
+  "facilityIntro": "Facilities shown below are placeholders. Confirm which amenities are actually available before publishing.",
+  "facilities": [
+    {
+      "title": "Private 1-BHK",
+      "description": "Your own private space"
+    },
+    {
+      "title": "Up to 2 guests",
+      "description": "Comfortable occupancy"
+    },
+    {
+      "title": "Downtown Guwahati",
+      "description": "Guwahati, Assam"
+    },
+    {
+      "title": "Personal welcome",
+      "description": "A homely stay experience"
+    }
+  ],
+  "connectHeading": "Stay connected",
+  "connectIntro": "Questions about your stay? Call us or follow EiraNest on Instagram.",
+  "reviewsHeading": "Guest reviews",
+  "reviewNote": "Google reviews can be displayed here after the EiraNest Google Business Profile is connected using its official Google integration.",
+  "bookingEyebrow": "Plan your visit",
+  "bookingHeading": "Request your stay",
+  "bookingIntro": "Send your preferred dates and details. Your reservation is not confirmed until the owner approves it.",
+  "footerTagline": "A little place to feel at home."
 }
