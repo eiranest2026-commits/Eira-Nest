@@ -24,9 +24,27 @@ collections:
           - { label: "Main headline", name: "title", widget: "string" }
           - { label: "Short introduction", name: "tagline", widget: "text" }
           - { label: "Location", name: "location", widget: "string" }
+          - { label: "About eyebrow", name: "aboutEyebrow", widget: "string" }
+          - { label: "About heading", name: "aboutHeading", widget: "string" }
           - { label: "About the homestay", name: "about", widget: "text" }
           - { label: "Gallery heading", name: "galleryHeading", widget: "string" }
           - { label: "Gallery description", name: "galleryIntro", widget: "text" }
+          - { label: "Facilities heading", name: "facilityHeading", widget: "string" }
+          - { label: "Facilities introduction", name: "facilityIntro", widget: "text" }
+          - label: "Facilities"
+            name: "facilities"
+            widget: "list"
+            fields:
+              - { label: "Facility title", name: "title", widget: "string" }
+              - { label: "Facility description", name: "description", widget: "string" }
+          - { label: "Contact heading", name: "connectHeading", widget: "string" }
+          - { label: "Contact introduction", name: "connectIntro", widget: "text" }
+          - { label: "Reviews heading", name: "reviewsHeading", widget: "string" }
+          - { label: "Reviews note", name: "reviewNote", widget: "text" }
+          - { label: "Booking eyebrow", name: "bookingEyebrow", widget: "string" }
+          - { label: "Booking heading", name: "bookingHeading", widget: "string" }
+          - { label: "Booking introduction", name: "bookingIntro", widget: "text" }
+          - { label: "Footer tagline", name: "footerTagline", widget: "string" }
           - { label: "Phone number 1", name: "phone1", widget: "string" }
           - { label: "Phone number 2", name: "phone2", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
