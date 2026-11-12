@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: eiranest2026-commits/Eira-Nest
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_domain: rad-bonbon-98762e.netlify.app
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "website"
+    label: "Website content"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "data/site.json"
+        format: "json"
+        fields:
+          - { label: "Browser / SEO title", name: "siteTitle", widget: "string" }
+          - { label: "Main headline", name: "title", widget: "string" }
+          - { label: "Short introduction", name: "tagline", widget: "text" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "About the homestay", name: "about", widget: "text" }
+          - { label: "Gallery heading", name: "galleryHeading", widget: "string" }
+          - { label: "Gallery description", name: "galleryIntro", widget: "text" }
+          - { label: "Phone number 1", name: "phone1", widget: "string" }
+          - { label: "Phone number 2", name: "phone2", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Google reviews URL", name: "google", widget: "string", required: false }
+          - { label: "Hero photograph", name: "hero", widget: "image", required: false }
+          - { label: "Gallery photo 1", name: "gallery1", widget: "image" }
+          - { label: "Gallery photo 2", name: "gallery2", widget: "image" }
+          - { label: "Gallery photo 3", name: "gallery3", widget: "image" }
+          - { label: "Gallery photo 4", name: "gallery4", widget: "image" }
+          - { label: "Gallery photo 5", name: "gallery5", widget: "image" }
