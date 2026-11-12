@@ -1,2 +1,257 @@
 <!DOCTYPE html>
-undefined
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f0e8">
+<title>EiraNest Homestay | Downtown Guwahati</title>
+<style>
+:root{--ink:#403329;--muted:#76685c;--accent:#987653;--paper:#f5f0e8;--white:#fffdf9;--line:#e8ded1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}.brand{display:inline-flex;align-items:center}.brand img{display:block;width:88px;height:88px;border-radius:50%}.navlinks{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}.btn{display:inline-block;background:var(--accent);color:white;padding:12px 20px;border:0;border-radius:8px;font-weight:650;cursor:pointer}.btn:hover{background:#806344}.hero{padding:22px 0 58px}.heroimg{height:430px;border-radius:20px;background:linear-gradient(90deg,rgba(35,27,21,.48),rgba(35,27,21,.04)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:end;padding:clamp(24px,5vw,58px);color:white}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:700}.hero h1{font:clamp(2.5rem,6vw,4.8rem)/1.05 Georgia,serif;max-width:650px;margin:12px 0}.hero p{max-width:520px;font-size:1.05rem}.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:.9rem}.section{padding:52px 0}.section h2{font:clamp(2rem,4vw,3rem)/1.15 Georgia,serif;margin:0 0 12px}.intro{max-width:680px;color:var(--muted)}.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:190px 190px;gap:12px;margin-top:28px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px}.gallery img:first-child{grid-row:span 2}.facilities{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}.facility{background:var(--white);padding:20px;border:1px solid var(--line);border-radius:12px}.facility b{display:block;margin-top:8px}.icon{font-size:1.4rem;color:var(--accent)}.booking{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,38px);margin-top:24px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field label{display:block;font-size:.86rem;font-weight:650;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid #d9cdbf;border-radius:8px;background:#fff;color:var(--ink);font:inherit}.field textarea{min-height:90px;resize:vertical}.full{grid-column:1/-1}.note{font-size:.85rem;color:var(--muted);background:var(--paper);padding:14px;border-radius:9px;margin:18px 0}.status{display:none;padding:14px;border-radius:9px;background:#edf5ed;color:#315b35;margin-top:14px}.footer{background:#49382b;color:#f8f1e8;padding:30px 0;margin-top:50px}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small{font-size:.86rem;color:var(--muted)}
+@media(max-width:720px){.navlinks{display:none}.heroimg{height:500px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px}.gallery img:first-child{grid-column:span 2;grid-row:auto}.facilities{grid-template-columns:1fr 1fr}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}}
+
+/* EiraNest editor */
+#editorToggle{position:fixed;right:18px;bottom:18px;z-index:9999;box-shadow:0 5px 20px #0003}
+#editorPanel{position:fixed;inset:0 0 0 auto;width:min(430px,100%);height:100dvh;overflow:auto;background:#fffdf9;z-index:10000;padding:22px;box-shadow:-12px 0 40px #0002;display:none}
+#editorPanel.open{display:block}
+#editorPanel h2{font:2rem Georgia,serif;margin:8px 0}
+#editorPanel label{display:block;font-size:.84rem;font-weight:700;margin:13px 0 5px}
+#editorPanel input,#editorPanel textarea{width:100%;padding:11px;border:1px solid #d9cdbf;border-radius:8px;font:inherit;background:white;color:#403329}
+#editorPanel textarea{min-height:75px}
+.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.editor-actions button{padding:10px 13px;border:0;border-radius:7px;background:#987653;color:white;font-weight:650;cursor:pointer}
+.editor-actions .secondary{background:#e9dfd3;color:#403329}
+.editor-hint{font-size:.82rem;color:#76685c;background:#f5f0e8;padding:12px;border-radius:8px}
+@media(max-width:720px){#editorToggle{right:12px;bottom:12px}}
+
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#" aria-label="EiraNest Homestay home"><img src="images/eiranest-logo.png" alt="EiraNest Homestay logo" width="88" height="88"></a>
+  <nav class="navlinks"><a href="#about">The stay</a><a href="#gallery">Gallery</a><a href="#facilities">Facilities</a><a href="#booking">Booking</a></nav>
+  <a class="btn" href="#booking">Request a stay</a>
+</header>
+<main>
+<section class="wrap hero">
+  <div class="heroimg"><div><div class="eyebrow">A private homestay · Downtown Guwahati</div><h1>A little place to feel at home.</h1><p>Your own comfortable space to slow down, settle in and enjoy Guwahati.</p><div class="meta"><span>⌖ Downtown Guwahati, Assam</span><span>⌂ Private 1-BHK</span><span>♙ Up to 2 guests</span></div></div></div>
+</section>
+<section class="wrap section" id="about">
+  <div class="eyebrow" style="color:var(--accent)">Welcome to EiraNest</div><h2>Your stay, your way.</h2>
+  <p class="intro">A private 1-BHK homestay designed for a relaxed and comfortable visit. Whether you're in town for work, family or a short getaway, EiraNest offers a welcoming place to return to at the end of the day.</p>
+</section>
+<section class="wrap section" id="gallery">
+  <h2>A glimpse inside</h2><p class="intro">Property gallery. Replace these sample photographs with your own EiraNest photos before publishing.</p>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Warm modern living room">
+    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=85" alt="Bedroom sample" onerror="this.src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=85'">
+    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=85" alt="Kitchen sample">
+    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=700&q=85" alt="Bathroom sample">
+    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Interior detail">
+  </div>
+</section>
+<section class="wrap section" id="facilities">
+  <h2>Made for a comfortable stay</h2><p class="intro">Facilities shown below are placeholders. Confirm which amenities are actually available before publishing.</p>
+  <div class="facilities">
+    <div class="facility"><span class="icon">⌂</span><b>Private 1-BHK</b><span class="small">Your own private space</span></div>
+    <div class="facility"><span class="icon">♙</span><b>Up to 2 guests</b><span class="small">Comfortable occupancy</span></div>
+    <div class="facility"><span class="icon">⌖</span><b>Downtown Guwahati</b><span class="small">Guwahati, Assam</span></div>
+    <div class="facility"><span class="icon">♡</span><b>Personal welcome</b><span class="small">A homely stay experience</span></div>
+  </div>
+</section>
+
+<section class="wrap section" id="connect">
+  <h2>Stay connected</h2>
+  <p class="intro">Questions about your stay? Call us or follow EiraNest on Instagram.</p>
+  <p><a class="btn" href="tel:7002365218">Call 7002365218</a> <a class="btn" href="tel:7577871491">Call 7577871491</a></p>
+  <p><a href="https://www.instagram.com/eira_nest_homestay/" target="_blank" rel="noopener">Follow @eira_nest_homestay on Instagram ↗</a></p>
+</section>
+<section class="wrap section" id="reviews">
+  <h2>Guest reviews</h2>
+  <p class="intro" id="reviewNote">Google reviews can be displayed here after the EiraNest Google Business Profile is connected using its official Google integration.</p>
+  <a id="googleReviewLink" class="btn" href="#" target="_blank" rel="noopener" hidden>Read our Google reviews</a>
+</section>
+<section class="wrap section" id="booking">
+  <div class="eyebrow" style="color:var(--accent)">Plan your visit</div><h2>Request your stay</h2><p class="intro">Send your preferred dates and details. Your reservation is not confirmed until the owner approves it.</p>
+  <div class="booking">
+    <form id="bookingForm">
+      <div class="formgrid">
+        <div class="field"><label for="checkin">Check-in date *</label><input id="checkin" type="date" required></div>
+        <div class="field"><label for="checkout">Check-out date *</label><input id="checkout" type="date" required></div>
+        <div class="field"><label for="guests">Number of guests *</label><select id="guests" required><option value="2" selected>2 guests</option></select></div>
+        <div class="field"><label for="name">Full name *</label><input id="name" autocomplete="name" required placeholder="Your full name"></div>
+        <div class="field"><label for="phone">Mobile number *</label><input id="phone" type="tel" autocomplete="tel" required placeholder="Your mobile number"></div>
+        <div class="field"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+        <div class="field full"><label for="message">Special requests</label><textarea id="message" placeholder="Anything you'd like us to know?"></textarea></div>
+      </div>
+      <div class="note">Booking requests are subject to availability and owner approval. This preview form does not yet send or store bookings. It must be connected to the EiraNest cloud backend before accepting real reservations.</div>
+      <button class="btn" type="submit">Prepare booking request</button>
+      <div class="status" id="status" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footerrow"><div><img src="images/eiranest-logo.png" alt="EiraNest Homestay" width="72" height="72" style="display:block;border-radius:50%;margin-bottom:8px"><div>A little place to feel at home.</div></div><div><b>Location</b><br>Downtown Guwahati, Assam<br><a href="tel:7002365218">7002365218</a> · <a href="tel:7577871491">7577871491</a><br><a href="https://www.instagram.com/eira_nest_homestay/" target="_blank" rel="noopener">Instagram: @eira_nest_homestay</a></div></div></footer>
+<script>
+const ci=document.getElementById('checkin'), co=document.getElementById('checkout');
+const today=new Date(); const localToday=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+ci.min=localToday; co.min=localToday;
+ci.addEventListener('change',()=>{co.min=ci.value||localToday;if(co.value && co.value<=ci.value)co.value='';});
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ if(co.value<=ci.value){alert('Check-out date must be after check-in date.');return;}
+ const data={checkIn:ci.value,checkOut:co.value,guests:"2",name:document.getElementById('name').value,phone:document.getElementById('phone').value,email:document.getElementById('email').value,message:document.getElementById('message').value};
+ const s=document.getElementById('status');s.style.display='block';s.textContent='Preview only: your details have been validated in this browser, but no booking has been sent. Cloud booking submission will be enabled when the backend is connected.';
+ console.log('EiraNest demo booking request',data);
+});
+</script>
+
+<button id="editorToggle" class="btn" type="button" aria-controls="editorPanel">✎ Edit website</button>
+<aside id="editorPanel" aria-label="Website editor">
+  <button id="closeEditor" class="btn" type="button">Close editor</button>
+  <h2>Website editor</h2>
+  <p class="editor-hint">Make changes here and select Save. Saved edits stay in this browser. To publish changes for everyone, export the updated HTML and upload it to your hosting service.</p>
+  <form id="siteEditor">
+    <label for="editTitle">Main heading</label><input id="editTitle">
+    <label for="editTagline">Short introduction</label><textarea id="editTagline"></textarea>
+    <label for="editLocation">Location</label><input id="editLocation">
+    <label for="editAbout">About the homestay</label><textarea id="editAbout"></textarea>
+    <label for="editPhone1">Phone number 1</label><input id="editPhone1">
+    <label for="editPhone2">Phone number 2</label><input id="editPhone2">
+    <label for="editInstagram">Instagram URL</label><input id="editInstagram" type="url">
+    <label for="editGoogle">Google Business Profile / reviews URL</label><input id="editGoogle" type="url" placeholder="Paste your public Google Maps business link">
+    <label for="editHero">Hero photograph URL</label><input id="editHero" type="url" placeholder="https://...">
+    <label for="editGallery1">Gallery photo 1 URL</label><input id="editGallery1" type="url">
+    <label for="editGallery2">Gallery photo 2 URL</label><input id="editGallery2" type="url">
+    <label for="editGallery3">Gallery photo 3 URL</label><input id="editGallery3" type="url">
+    <label for="editGallery4">Gallery photo 4 URL</label><input id="editGallery4" type="url">
+    <label for="editGallery5">Gallery photo 5 URL</label><input id="editGallery5" type="url">
+    <div class="editor-actions">
+      <button type="submit">Save changes</button>
+      <button class="secondary" id="exportHtml" type="button">Download updated HTML</button>
+      <button class="secondary" id="exportData" type="button">Export backup</button>
+      <button class="secondary" id="importData" type="button">Import backup</button>
+      <button class="secondary" id="resetEditor" type="button">Reset edits</button>
+    </div>
+    <input id="importFile" type="file" accept="application/json" hidden>
+  </form>
+  <p class="editor-hint">Guest capacity is fixed at 2. Google reviews are not automatically synchronized yet: that requires the correct Google Business Profile / Place ID, Google API credentials and a secure cloud backend. Add your public profile link above to show a clickable reviews link.</p>
+  <p id="editorStatus" role="status" aria-live="polite"></p>
+</aside>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fields = {
+    title: 'A little place to feel at home.',
+    tagline: 'Your own comfortable space to slow down, settle in and enjoy Guwahati.',
+    location: 'Downtown Guwahati, Assam',
+    about: `A private 1-BHK homestay designed for a relaxed and comfortable visit. Whether you're in town for work, family or a short getaway, EiraNest offers a welcoming place to return to at the end of the day.`,
+    phone1: '7002365218',
+    phone2: '7577871491',
+    instagram: 'https://www.instagram.com/eira_nest_homestay/',
+    google: '',
+    hero: '',
+    gallery1: '', gallery2: '', gallery3: '', gallery4: '', gallery5: ''
+  };
+  const originalGallery = [...document.querySelectorAll('.gallery img')].map(img => img.src);
+  const originalHero = getComputedStyle(document.querySelector('.heroimg')).backgroundImage;
+  const inputIds = Object.keys(fields);
+  const storageKey = 'eiranest-site-settings-v1';
+
+  function defaults() {
+    const data = {...fields};
+    data.hero = originalHero.match(/url\(["']?(.*?)["']?\)/)?.[1] || '';
+    originalGallery.forEach((url, i) => data['gallery' + (i+1)] = url);
+    return data;
+  }
+  function getData() {
+    try { return {...defaults(), ...JSON.parse(localStorage.getItem(storageKey) || '{}')}; }
+    catch { return defaults(); }
+  }
+  function setField(id, value) {
+    const el = $('edit' + id.charAt(0).toUpperCase() + id.slice(1));
+    if (el) el.value = value || '';
+  }
+  function render(data) {
+    document.querySelector('.hero h1').textContent = data.title;
+    document.querySelector('.hero p').textContent = data.tagline;
+    document.querySelector('.hero .eyebrow').textContent = 'A private homestay · ' + data.location;
+    document.querySelector('.hero .meta span:first-child').textContent = '⌖ ' + data.location;
+    document.querySelector('#about .intro').textContent = data.about;
+    document.querySelectorAll('.gallery img').forEach((img, i) => {
+      const url = data['gallery' + (i+1)];
+      if (url) img.src = url;
+    });
+    if (data.hero) document.querySelector('.heroimg').style.backgroundImage =
+      `linear-gradient(90deg,rgba(35,27,21,.48),rgba(35,27,21,.04)),url("${data.hero.replace(/["\\]/g, '')}")`;
+    const footer = document.querySelector('.footerrow > div:nth-child(2)');
+    footer.innerHTML = `<b>Location</b><br>${escapeHtml(data.location)}<br><a href="tel:${escapeAttr(data.phone1)}">${escapeHtml(data.phone1)}</a> · <a href="tel:${escapeAttr(data.phone2)}">${escapeHtml(data.phone2)}</a><br><a href="${escapeAttr(data.instagram)}" target="_blank" rel="noopener">Instagram: @eira_nest_homestay</a>`;
+    const connect = $('connect');
+    connect.querySelector('a[href^="tel:700"]').href = 'tel:' + data.phone1;
+    connect.querySelector('a[href^="tel:700"]').textContent = 'Call ' + data.phone1;
+    connect.querySelector('a[href^="tel:757"]').href = 'tel:' + data.phone2;
+    connect.querySelector('a[href^="tel:757"]').textContent = 'Call ' + data.phone2;
+    const insta = connect.querySelector('a[href*="instagram.com"]');
+    insta.href = data.instagram;
+    const reviewLink = $('googleReviewLink');
+    if (data.google) { reviewLink.href = data.google; reviewLink.hidden = false; }
+    else { reviewLink.hidden = true; }
+  }
+  function escapeHtml(v) { return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function escapeAttr(v) { return escapeHtml(v); }
+  function fill(data) { inputIds.forEach(k => setField(k, data[k])); }
+  function currentFormData() {
+    const d = {};
+    inputIds.forEach(k => d[k] = $('edit' + k.charAt(0).toUpperCase() + k.slice(1)).value.trim());
+    return d;
+  }
+  let active = getData();
+  render(active);
+  fill(active);
+  $('editorToggle').addEventListener('click', () => $('editorPanel').classList.add('open'));
+  $('closeEditor').addEventListener('click', () => $('editorPanel').classList.remove('open'));
+  $('siteEditor').addEventListener('submit', e => {
+    e.preventDefault();
+    active = currentFormData();
+    localStorage.setItem(storageKey, JSON.stringify(active));
+    render(active);
+    $('editorStatus').textContent = 'Saved in this browser. Download the updated HTML and publish it to update the live website.';
+  });
+  $('resetEditor').addEventListener('click', () => {
+    if (!confirm('Reset all website edits in this browser?')) return;
+    localStorage.removeItem(storageKey);
+    active = defaults(); fill(active); render(active);
+    $('editorStatus').textContent = 'Local edits reset.';
+  });
+  function download(name, type, content) {
+    const blob = new Blob([content], {type});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  $('exportData').addEventListener('click', () => download('eiranest-website-backup.json','application/json',JSON.stringify(currentFormData(),null,2)));
+  $('importData').addEventListener('click', () => $('importFile').click());
+  $('importFile').addEventListener('change', async e => {
+    const f = e.target.files[0]; if (!f) return;
+    try { const d = {...defaults(), ...JSON.parse(await f.text())}; fill(d); $('siteEditor').requestSubmit(); }
+    catch { $('editorStatus').textContent = 'Could not read that backup file.'; }
+    e.target.value = '';
+  });
+  $('exportHtml').addEventListener('click', () => {
+    const clone = document.documentElement.cloneNode(true);
+    const panel = clone.querySelector('#editorPanel');
+    if (panel) panel.classList.remove('open');
+    const data = currentFormData();
+    // Store settings in the exported page so the published copy opens with the chosen content.
+    const script = clone.querySelector('script:last-of-type');
+    const config = clone.createElement('script');
+    config.textContent = 'localStorage.setItem("eiranest-site-settings-v1", ' + JSON.stringify(JSON.stringify(data)) + ');';
+    clone.querySelector('body').insertBefore(config, clone.querySelector('body').firstChild);
+    download('eiranest-website.html','text/html','<!DOCTYPE html>\\n' + clone.outerHTML);
+    $('editorStatus').textContent = 'Updated HTML downloaded. Upload this file to your website host to publish it.';
+  });
+})();
+</script>
+
+</body></html>
