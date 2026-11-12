@@ -254,4 +254,36 @@ document.getElementById('bookingForm').addEventListener('submit',e=>{
 })();
 </script>
 
+
+<script>
+/* EiraNest cloud content: edits published through /admin/ */
+(async function loadEiraNestCloudContent(){
+  try {
+    const response = await fetch('/data/site.json?updated=' + Date.now(), {cache:'no-store'});
+    if (!response.ok) return;
+    const d = await response.json();
+    const setText = (selector, value) => { const el=document.querySelector(selector); if(el && typeof value==='string') el.textContent=value; };
+    setText('title', d.siteTitle || 'EiraNest Homestay | Downtown Guwahati');
+    setText('.hero h1', d.title);
+    setText('.hero p', d.tagline);
+    setText('.hero .eyebrow', 'A private homestay · ' + (d.location || 'Downtown Guwahati, Assam'));
+    setText('.hero .meta span:first-child', '⌖ ' + (d.location || 'Downtown Guwahati, Assam'));
+    setText('#about .intro', d.about);
+    setText('#gallery h2', d.galleryHeading);
+    setText('#gallery > .intro', d.galleryIntro);
+    document.querySelectorAll('.gallery img').forEach((img,i)=>{ const v=d['gallery'+(i+1)]; if(v) img.src=v; });
+    if(d.hero) document.querySelector('.heroimg').style.backgroundImage='linear-gradient(90deg,rgba(35,27,21,.48),rgba(35,27,21,.04)),url("'+String(d.hero).replace(/["\\]/g,'')+'")';
+    const footer=document.querySelector('.footerrow > div:nth-child(2)');
+    if(footer) footer.innerHTML='<b>Location</b><br>'+String(d.location||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))+'<br><a href="tel:'+encodeURIComponent(d.phone1||'')+'">'+(d.phone1||'')+'</a> · <a href="tel:'+encodeURIComponent(d.phone2||'')+'">'+(d.phone2||'')+'</a><br><a href="'+String(d.instagram||'#').replace(/["<>]/g,'')+'" target="_blank" rel="noopener">Instagram: @eira_nest_homestay</a>';
+    const calls=[...document.querySelectorAll('#connect a[href^="tel:"]')];
+    if(calls[0] && d.phone1){calls[0].href='tel:'+d.phone1;calls[0].textContent='Call '+d.phone1;}
+    if(calls[1] && d.phone2){calls[1].href='tel:'+d.phone2;calls[1].textContent='Call '+d.phone2;}
+    const insta=document.querySelector('#connect a[href*="instagram.com"]');
+    if(insta && d.instagram) insta.href=d.instagram;
+    const review=document.getElementById('googleReviewLink');
+    if(review){if(d.google){review.href=d.google;review.hidden=false;}else{review.hidden=true;}}
+  } catch(error) { console.warn('EiraNest cloud content could not be loaded.',error); }
+})();
+</script>
+
 </body></html>
